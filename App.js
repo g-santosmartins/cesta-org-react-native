@@ -1,23 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView, StatusBar } from 'react-native';
 import React from 'react';
+
+// internal imports
 import { Basket } from './src/screens/Basket';
 
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Basket/>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <StatusBar />
+      <Basket />
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
