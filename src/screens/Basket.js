@@ -3,6 +3,7 @@ import { Text, Image, StyleSheet, Dimensions, View } from 'react-native'
 import topViewImageBackground from '../../assets/topo.png'
 // import tomatoImage from '../../assets/frutas/Tomate.png'
 import farmlogo from '../../assets/logo.png'
+import CustomText from '../components/CustomText'
 
 // getting the true width depending the divice you're running
 const width = Dimensions.get('screen').width
@@ -14,26 +15,26 @@ export function Basket() {
         source={topViewImageBackground}
         style={styles.top}
       />
-      <Text
+      <CustomText
         style={styles.title}
       >
         Detalhe da cesta
-      </Text>
+      </CustomText>
 
       <View style={styles.basket}>
-        <Text style={styles.name}>Cesta de Verduras</Text>
+        <CustomText style={styles.name}>Cesta de Verduras</CustomText>
 
         <View style={styles.farm}>
           <Image source={farmlogo} style={styles.farmImage}/>
-          <Text style={styles.farmName}>Jenny Jack Farm</Text>
+          <CustomText style={styles.farmName}>Jenny Jack Farm</CustomText>
         </View>
-        <Text style={styles.description}>
+        <CustomText style={styles.description}>
           Uma cesta com produtos selecionados
           cuidadosamente da fazenda direto para
           sua cozinha.
-        </Text>
+        </CustomText>
 
-        <Text style={styles.price}>R$ 40</Text>
+        <CustomText style={styles.price}>R$ 40,00</CustomText>
       </View>
     </>
   )
@@ -68,8 +69,7 @@ const styles = StyleSheet.create({
     // line height
     lineHeight: 42,
     color: "#464646",
-    // fontWeight: "bold",
-    fontFamily: "MontserratBold",
+    fontWeight: "bold",
   },
 
   farm: {
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     marginLeft: 12,
-    fontFamily: "MontserratRegular",
+    // fontFamily: "MontserratRegular",
   },
 
   farmImage: {
