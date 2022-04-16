@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
     // line height
     lineHeight: 42,
     color: "#464646",
-    fontWeight: "bold"
+    // fontWeight: "bold",
+    fontFamily: "MontserratBold",
   },
 
   farm: {
@@ -80,6 +81,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     marginLeft: 12,
+    fontFamily: "MontserratRegular",
   },
 
   farmImage: {
