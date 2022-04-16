@@ -1,26 +1,21 @@
 import React from 'react'
 import {View, Image, StyleSheet} from 'react-native'
 import CustomText from '../../../components/CustomText'
-import farmlogo from '../../../../assets/logo.png'
 
-
-export default function Details() {
+export default function Details({name, logoFarm, description, farmName, price }) {
   return (
     <>
         <View style={styles.basket}>
-        <CustomText style={styles.name}>Cesta de Verduras</CustomText>
+        <CustomText style={styles.name}>{name}</CustomText>
 
         <View style={styles.farm}>
-          <Image source={farmlogo} style={styles.farmImage}/>
-          <CustomText style={styles.farmName}>Jenny Jack Farm</CustomText>
+          <Image source={logoFarm} style={styles.farmImage}/>
+          <CustomText style={styles.farmName}>{farmName}</CustomText>
         </View>
         <CustomText style={styles.description}>
-          Uma cesta com produtos selecionados
-          cuidadosamente da fazenda direto para
-          sua cozinha.
+         {description}
         </CustomText>
-
-        <CustomText style={styles.price}>R$ 40,00</CustomText>
+        <CustomText style={styles.price}>{price}</CustomText>
       </View>
     </>
   )

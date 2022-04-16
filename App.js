@@ -7,7 +7,9 @@ import {
    Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 
 // internal imports
-import { Basket } from './src/screens/Basket';
+import  Basket from './src/screens/Basket';
+
+import mock from './src/mocks/basket'
 
 export default function App() {
 
@@ -25,7 +27,8 @@ export default function App() {
   return (
     <SafeAreaView>
       <StatusBar />
-      <Basket />
+      {/* passing all params separatly*/}
+      <Basket {...mock} />
     </SafeAreaView>
   );
 }

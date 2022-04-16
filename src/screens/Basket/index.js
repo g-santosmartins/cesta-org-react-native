@@ -5,11 +5,11 @@ import Details from './components/Details'
 
 // const width = Dimensions.get('screen').width
 
-export function Basket() {
+export default function Basket({top, details}) {
   return (
     <>
-      <TopView/>
-      <Details/>
+      <TopView {...top}/>
+      <Details {...details}/>
     </>
   )
 }

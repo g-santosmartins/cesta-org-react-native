@@ -7,7 +7,7 @@ import CustomText from '../../../components/CustomText'
 // getting the true width depending the divice you're running
 const width = Dimensions.get('screen').width
 
-export default function TopView() {
+export default function TopView({title}) {
   return (
     <>
     <Image
@@ -17,7 +17,7 @@ export default function TopView() {
       <CustomText
         style={styles.title}
       >
-        Detalhe da cesta
+        {title}
       </CustomText>
 
     </>
