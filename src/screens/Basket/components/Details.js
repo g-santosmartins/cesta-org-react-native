@@ -1,27 +1,13 @@
 import React from 'react'
-import { Text, Image, StyleSheet, Dimensions, View } from 'react-native'
-import topViewImageBackground from '../../assets/topo.png'
-// import tomatoImage from '../../assets/frutas/Tomate.png'
-import farmlogo from '../../assets/logo.png'
-import CustomText from '../components/CustomText'
+import {View, Image, StyleSheet} from 'react-native'
+import CustomText from '../../../components/CustomText'
+import farmlogo from '../../../../assets/logo.png'
 
-// getting the true width depending the divice you're running
-const width = Dimensions.get('screen').width
 
-export function Basket() {
+export default function Details() {
   return (
     <>
-      <Image
-        source={topViewImageBackground}
-        style={styles.top}
-      />
-      <CustomText
-        style={styles.title}
-      >
-        Detalhe da cesta
-      </CustomText>
-
-      <View style={styles.basket}>
+        <View style={styles.basket}>
         <CustomText style={styles.name}>Cesta de Verduras</CustomText>
 
         <View style={styles.farm}>
@@ -39,25 +25,9 @@ export function Basket() {
     </>
   )
 }
-
 // styling a object
 const styles = StyleSheet.create({
-  top: {
-    width: "100%",
-    // how to find the perfect height
-    height: 578 / 768 * width,
-  },
-
-  title: {
-    width: "100%",
-    position: "absolute",
-    fontSize: 20,
-    textAlign: "center",
-    lineHeight: 26,
-    color: "white",
-    fontWeight: "bold",
-    padding: 16
-  },
+  
 
   basket: {
     paddingVertical: 8,
@@ -103,4 +73,3 @@ const styles = StyleSheet.create({
     marginTop: 8
   }
 })
-

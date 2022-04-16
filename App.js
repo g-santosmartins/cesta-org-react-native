@@ -9,7 +9,6 @@ import {
 // internal imports
 import { Basket } from './src/screens/Basket';
 
-
 export default function App() {
 
   // importing font from expo google font lib
