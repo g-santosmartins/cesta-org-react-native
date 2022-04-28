@@ -1,16 +1,19 @@
 import React from 'react'
-import {StyleSheet, View } from 'react-native'
+import { StyleSheet, ScrollView } from 'react-native'
 import TopView from './components/TopView'
 import Details from './components/Details'
+import Items from './components/Items'
+import { } from 'react-native'
 
 // const width = Dimensions.get('screen').width
 
-export default function Basket({top, details}) {
+export default function Basket({ top, details, items }) {
   return (
-    <>
-      <TopView {...top}/>
-      <Details {...details}/>
-    </>
+    <ScrollView>
+      <TopView {...top} />
+      <Details {...details} />
+      <Items {...items} />
+    </ScrollView>
   )
 }
 

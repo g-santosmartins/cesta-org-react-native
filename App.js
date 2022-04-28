@@ -13,6 +13,7 @@ import AppLoading from 'expo-app-loading';
 import  Basket from './src/screens/Basket';
 
 import mock from './src/mocks/basket'
+import Items from './src/screens/Basket/components/Items';
 
 export default function App() {
 
@@ -33,7 +34,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <StatusBar />
-      {/* passing all params separatly*/}
+      {/* passing all params separatly with ...*/}
       <Basket {...mock} />
     </SafeAreaView>
   );
