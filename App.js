@@ -13,7 +13,6 @@ import AppLoading from 'expo-app-loading';
 import  Basket from './src/screens/Basket';
 
 import mock from './src/mocks/basket'
-import Items from './src/screens/Basket/components/Items';
 
 export default function App() {
 
@@ -25,14 +24,12 @@ export default function App() {
 
   // making sure to return a view if google fonts is not ready yet
   if(!loadedFont) {
-    // return view logic
-    // return <View></View>
-    // Use this to feedback
     return <AppLoading/>
   }
 
   return (
-    <SafeAreaView>
+    // flex 1 to keep the screen on it's own size
+    <SafeAreaView style={{flex: 1}}>
       <StatusBar />
       {/* passing all params separatly with ...*/}
       <Basket {...mock} />
